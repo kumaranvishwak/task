@@ -25,7 +25,7 @@ public class ApplicationFactory {
 		Scanner sc = new Scanner(System.in);
 char exit;
 		do {
-			System.out.println("Select an option:\n1.springboot\n2.Outlook\n3.Eclipse\n4.Webex\n5.MongoDB");
+			System.out.println("Select an option:\n1.springboot\n2.Microsoft Teams\n3.Eclipse\n4.Webex\n5.MongoDB");
 			int option = sc.nextInt();
 			ApplicationFactory af = new ApplicationFactory();
 			 af.fetchApplication(--option);
