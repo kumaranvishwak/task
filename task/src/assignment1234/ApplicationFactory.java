@@ -4,14 +4,14 @@ import java.util.Scanner;
 
 public class ApplicationFactory {
 
-	public String fetchApplication(int a) {
+	public void fetchApplication(int a) {
 		String[] app = { "springboot", "Microsoft Teams", "Eclipse","Webex","MongoDB" };
-		return app[a];
+		applicationDetails(a);
 	}
 
-	public void applicationDetails(int a) {
+	public static void applicationDetails(int a) {
 		String[] app1 = { "Spring Boot is an open source Java-based framework used to create a micro Service.",
-				"Microsoft Teams is a collaboration app that helps your team stay organized and have conversations—all in one place.",
+				"Microsoft Teams is a collaboration app that helps your team stay organized and have conversationsâ€”all in one place.",
 				"Eclipse is an integrated development environment used in computer programming. It contains a base workspace and an extensible plug-in system for customizing the environment."
 				,"Connecting people on one place"
 				,"a NoSql database"};
@@ -29,7 +29,7 @@ char exit;
 			int option = sc.nextInt();
 			ApplicationFactory af = new ApplicationFactory();
 			 af.fetchApplication(--option);
-			af.applicationDetails(option);
+			
 			System.out.println("you need to get another application details Y/N--");
 			exit=sc.next().charAt(0);
 		} while (exit=='y'||exit=='Y');
